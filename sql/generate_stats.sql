@@ -1,3 +1,4 @@
+-- select weekly engagement events, counts of events, and distinct users
 SELECT
     DATE_TRUNC('week', occurred_at) as week, 
     event_name,
