@@ -85,7 +85,7 @@ and shared backend) around the week of 2014-08-04.
 
 | # | Hypothesis | Verdict | Evidence |
 |---|---|---|---|
-| 1 | Holiday / seasonal effect | **Ruled out** The drop is spread across countries and regions: US -16.3% vs. all other countries -17.2%; Europe -17.3%, Americas -18.1%, Asia-Pacific -18.7% |
+| 1 | Holiday / seasonal effect | **Ruled out** | The drop is spread across countries and regions: US -16.3% vs. all other countries -17.2%; Europe -17.3%, Americas -18.1%, Asia-Pacific -18.7% |
 | 2 | Site/server/button bug | **Not ruled out: mobile hit hardest, but not mobile-only** | No single device shows an isolated crash pattern. Phone/tablet fell much harder than desktop, but established desktop users also broke |
 | 3 | Users concentrated in one location | **Ruled out** | US is 28% of volume and 27% of events lost; it would have needed to fall about 61% on its own to explain the aggregate drop, vs. 16.3% observed |
 | 4 | Drop in new signups | **Ruled out** | Signups grew throughout the period, hitting an all-time high by 2014-08-25 |
