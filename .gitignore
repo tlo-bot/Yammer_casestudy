@@ -1,0 +1,13 @@
+# Generated intermediate data (regenerate via scripts 01, 02, 04 — don't commit)
+data/*_clean.csv
+data/yammer_events_per_user.csv
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/

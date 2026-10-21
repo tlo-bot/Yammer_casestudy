@@ -49,5 +49,5 @@ summary = (
     .mean()
     .round(1)
 )
-print("\nAverage percent change across the 4 dip weeks (per event):\n")
+print("\nAverage week-over-week percent change across the 4 dip weeks (per event):\n")
 print(summary.to_string())

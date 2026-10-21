@@ -51,7 +51,7 @@ summary["share_users"] = log_summary["distinct_users"] / log_summary["events"] *
 summary["share_per_user"] = log_summary["events_per_user"] / log_summary["events"] * 100
 summary[["share_users", "share_per_user"]] = summary[["share_users", "share_per_user"]].round(1)
 
-print("Average percent change and contribution shares, per event:\n")
+print("Average week-over-week percent change and contribution shares, per event:\n")
 print(summary.to_string())
 
 # --- Plot 1: show users and per-user percent change, stacked ---
@@ -68,7 +68,7 @@ ax.barh(
 ax.set_yticks(list(y_pos))
 ax.set_yticklabels(summary.index)
 ax.axvline(0, color="black", linewidth=0.8)
-ax.set_xlabel("Average % change during dip weeks")
+ax.set_xlabel("Average week-over-week % change during dip weeks")
 ax.set_title("Users vs. per-user activity for each event's drop")
 ax.legend()
 fig.tight_layout()

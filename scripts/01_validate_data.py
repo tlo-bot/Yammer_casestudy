@@ -47,7 +47,11 @@ fig, ax = plt.subplots(figsize=(10, 6))
 for event in ALL_EVENTS:
     subset = df[df["event_name"] == event]
     ax.plot(subset["week"], subset["events"], marker="o", label=event)
-ax.axvline(DIP_START, color="red", linestyle="--", alpha=0.6, label="Dip starts (2014-08-04)")
+ax.axvspan(pd.Timestamp(DIP_WEEKS[0]) - pd.Timedelta(days=3.5),
+           pd.Timestamp(DIP_WEEKS[-1]) + pd.Timedelta(days=3.5),
+           color="red", alpha=0.08, label="Dip weeks (08-04 – 08-25)")
+ax.axvline(pd.Timestamp("2014-07-28"), color="gray", linestyle=":", alpha=0.9,
+           label="Peak week (07-28)")
 ax.set_xlabel("Week")
 ax.set_ylabel("Events")
 ax.set_title("Weekly engagement events")
@@ -69,7 +73,9 @@ for ax, event in zip(axes, CORE_EVENTS):
     subset = df[(df["event_name"] == event) & (df["week"] >= plot_start)]
     ax.bar(subset["week"], subset["percent_change"], width=5, color="steelblue")
     ax.axhline(0, color="black", linewidth=0.8)
-    ax.axvline(DIP_START, color="red", linestyle="--", alpha=0.6)
+    ax.axvspan(pd.Timestamp(DIP_WEEKS[0]) - pd.Timedelta(days=3.5),
+               pd.Timestamp(DIP_WEEKS[-1]) + pd.Timedelta(days=3.5),
+               color="red", alpha=0.08)
     ax.set_title(event, loc="left", fontsize=10)
     ax.set_ylabel("% change")
 axes[-1].set_xlabel("Week")
